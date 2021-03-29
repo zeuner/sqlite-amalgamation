@@ -26,6 +26,8 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Release or Debug?" FORCE)
 endif()
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 #------------------------------------------------------------------------------
 
 # SQLite3 as static library:
