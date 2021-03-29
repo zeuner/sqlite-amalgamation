@@ -68,7 +68,7 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC # inject user's options
 # platform/compiler specific settings
 if(CMAKE_SYSTEM_NAME MATCHES Linux)
     find_package(Threads REQUIRED)
-    target_link_libraries(${PROJECT_NAME} INTERFACE Threads::Threads ${CMAKE_DL_LIBS})
+    target_link_libraries(${PROJECT_NAME} INTERFACE Threads::Threads ${CMAKE_DL_LIBS} m)
 elseif(WIN32 AND ${CMAKE_SIZEOF_VOID_P} LESS 8) # this is a 32bit windows
     option(BUILD_WITH_XPSDK "build for old 32bit (WinXP/2003) targets" OFF)
     if(BUILD_WITH_XPSDK)
